@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Video Chat Application</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+        <link href="/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <div id="video-chat-lobby">
+            <h2 class="text">Video Chat Application</h2>
+            <input id="roomName" type="text" placeholder="Room Name" />
+            <button id="join">Join</button>
+        </div>
+        <div id="video-chat-room" align="center" width="1300">
+            <div width="640" style="float:left">
+                <video width="640" id="user-video"></video><br/>
+                <p style="color:#FFF; font-size:16pt">User video</p>
+            </div>
+            <div width="640" style="float:right">
+                <video width="640" id="peer-video"></video><br/>
+                <p style="color:#FFF; font-size:16pt">Peer video</p>
+            </div>
+        </div>
+
+    </body>
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+    <script src="/chat.js"></script>
+</html>
